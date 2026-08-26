@@ -2,11 +2,10 @@ import json
 import os
 import sys
 import time
-import urllib.parse
 import urllib.request
 from typing import Dict, List, Optional
 
-# List of supported HoYoverse games
+# Danh sách các game của HoYoverse
 GAMES = [
     {
         "name": "Genshin Impact",
@@ -48,7 +47,7 @@ def get_headers(cookie: str) -> Dict[str, str]:
         "Cookie": cookie,
         "Content-Type": "application/json;charset=UTF-8",
         "Accept": "application/json, text/plain, */*",
-        "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
         "x-rpc-app_version": "1.5.0",
         "x-rpc-client_type": "5",
         "x-rpc-language": "vi-vn",
@@ -76,20 +75,36 @@ def checkin_game(game: dict, cookie: str) -> str:
     sign_url = game["sign_url"]
     info_url = game["info_url"]
 
-    # Check info first
+    # Kiểm tra thông tin điểm danh
     info_res = send_request(info_url, cookie)
-    if info_res.get("retcode") != 0:
-        msg = info_res.get("message", "Lỗi không xác định")
-        return f"[{name}] ⚠️ Lỗi kiểm tra trạng thái: {msg} (retcode: {info_res.get('retcode')})"
+    retcode = info_res.get("retcode")
+    msg = info_res.get("message", "")
+
+    if retcode == -10002 or "No in-game character" in msg or "Profile not found" in msg:
+        return f"[{name}] ⏭️ Bỏ qua (Chưa tạo nhân vật trong game)"
+    
+    if retcode != 0:
+        # Thử gửi request điểm danh trực tiếp nếu info trả mã lỗi khác
+        sign_res = send_request(sign_url, cookie, payload={"act_id": act_id})
+        sign_code = sign_res.get("retcode")
+        sign_msg = sign_res.get("message", "")
+        if sign_code == 0:
+            return f"[{name}] ✅ Điểm danh thành công!"
+        elif sign_code == -5003:
+            return f"[{name}] ℹ️ Hôm nay bạn đã điểm danh rồi."
+        elif sign_code == -10002 or "No in-game character" in sign_msg or "Profile not found" in sign_msg:
+            return f"[{name}] ⏭️ Bỏ qua (Chưa tạo nhân vật trong game)"
+        else:
+            return f"[{name}] ℹ️ Không hoạt động: {sign_msg or msg} (Code: {sign_code or retcode})"
 
     data = info_res.get("data", {})
     is_sign = data.get("is_sign", False)
     total_sign_day = data.get("total_sign_day", 0)
 
     if is_sign:
-        return f"[{name}] ℹ️ Hôm nay bạn đã điểm danh rồi (Tổng số ngày: {total_sign_day})."
+        return f"[{name}] ℹ️ Hôm nay bạn đã điểm danh rồi (Tổng số ngày tích lũy: {total_sign_day})."
 
-    # Proceed to sign in
+    # Tiến hành điểm danh
     sign_res = send_request(sign_url, cookie, payload={"act_id": act_id})
     retcode = sign_res.get("retcode")
     msg = sign_res.get("message", "")
@@ -105,7 +120,7 @@ def checkin_game(game: dict, cookie: str) -> str:
 def send_discord_notification(webhook_url: str, message: str):
     if not webhook_url:
         return
-    payload = {"content": f"**HoYoLAB Auto Check-in Result**\n\n{message}"}
+    payload = {"content": f"**🎮 HoYoLAB Auto Check-in**\n\n{message}"}
     data = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(
         webhook_url,
@@ -161,7 +176,6 @@ def main():
 
     summary = "\n".join(results)
 
-    # Optional notifications
     discord_webhook = os.environ.get("DISCORD_WEBHOOK", "").strip()
     if discord_webhook:
         send_discord_notification(discord_webhook, summary)
