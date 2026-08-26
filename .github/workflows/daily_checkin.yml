@@ -1,0 +1,27 @@
+name: HoYoLAB Daily Check-in
+
+on:
+  schedule:
+    # Chạy mỗi ngày lúc 00:00 UTC (tức 07:00 sáng giờ VN UTC+7)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Cho phép bấm nút "Run workflow" thủ công trên GitHub
+
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Check-in Script
+        env:
+          HOYOLAB_COOKIE: ${{ secrets.HOYOLAB_COOKIE }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python checkin.py
