@@ -67,9 +67,21 @@
       "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b17a/273fcb9e0ae8f76d04622dde8e1b267b.png"
     },
     {
+      "id": 10000150,
+      "name": "Odette",
+      "element": "Cryo",
+      "rarity": 5,
+      "level": 90,
+      "constellation": 1,
+      "fetter_level": 4,
+      "weapon": null,
+      "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba976/38c83cb1b5c605921b3d773d9e5dffc2.png",
+      "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba976/84d26c80dd4f5ef83ea4e1d775991125.png"
+    },
+    {
       "id": 10000007,
       "name": "Nhà Lữ Hành",
-      "element": "Geo",
+      "element": "Pyro",
       "rarity": 5,
       "level": 90,
       "constellation": 6,
@@ -79,28 +91,28 @@
       "card_image": "https://webstatic.hoyoverse.com/upload/static-resource/2023/05/08/bae613577eb442ebe8afa7f5ef9de459_128078519936695314.png"
     },
     {
+      "id": 10000148,
+      "name": "Alyosha",
+      "element": "Electro",
+      "rarity": 4,
+      "level": 90,
+      "constellation": 6,
+      "fetter_level": 5,
+      "weapon": null,
+      "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba976/faa96b61235674d245e3134c4175f684.png",
+      "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba976/d6d298b9539ae11fd1275a39e2a5383c.png"
+    },
+    {
       "id": 10000016,
       "name": "Diluc",
       "element": "Pyro",
       "rarity": 5,
       "level": 80,
       "constellation": 2,
-      "fetter_level": 7,
+      "fetter_level": 8,
       "weapon": null,
       "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/929d6645727e400b3a294b559e36a03f.png",
       "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/043e63419a356fd2bf13db8dfb2b5d4d.png"
-    },
-    {
-      "id": 10000150,
-      "name": "Odette",
-      "element": "Cryo",
-      "rarity": 5,
-      "level": 80,
-      "constellation": 1,
-      "fetter_level": 3,
-      "weapon": null,
-      "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba976/38c83cb1b5c605921b3d773d9e5dffc2.png",
-      "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba976/84d26c80dd4f5ef83ea4e1d775991125.png"
     },
     {
       "id": 10000031,
@@ -108,23 +120,11 @@
       "element": "Electro",
       "rarity": 4,
       "level": 80,
-      "constellation": 3,
+      "constellation": 4,
       "fetter_level": 8,
       "weapon": null,
       "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/207a0e35e0637a2bcb0a28fdfa61f7a4.png",
       "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/106a64d4df0e0ff92f897ddd157812fa.png"
-    },
-    {
-      "id": 10000148,
-      "name": "Alyosha",
-      "element": "Electro",
-      "rarity": 4,
-      "level": 80,
-      "constellation": 6,
-      "fetter_level": 4,
-      "weapon": null,
-      "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba976/faa96b61235674d245e3134c4175f684.png",
-      "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba976/d6d298b9539ae11fd1275a39e2a5383c.png"
     },
     {
       "id": 10000039,
@@ -132,11 +132,23 @@
       "element": "Cryo",
       "rarity": 4,
       "level": 70,
-      "constellation": 4,
+      "constellation": 5,
       "fetter_level": 7,
       "weapon": null,
       "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3449/3de7b18fbecffbb57a73fe5032d24950.png",
       "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3449/043e7bf77209f350e1ce109796bdc9a5.png"
+    },
+    {
+      "id": 10000105,
+      "name": "Ororon",
+      "element": "Electro",
+      "rarity": 4,
+      "level": 70,
+      "constellation": 3,
+      "fetter_level": 5,
+      "weapon": null,
+      "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/64a90c55b4bb72cf06068f3d82dbc8da.png",
+      "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/81f5f988b934a9a47db60c38606d1fc2.png"
     },
     {
       "id": 10000032,
@@ -151,16 +163,28 @@
       "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/697a077514d8ec3820d93d087b57c9a1.png"
     },
     {
-      "id": 10000105,
-      "name": "Ororon",
-      "element": "Electro",
+      "id": 10000023,
+      "name": "Xiangling",
+      "element": "Pyro",
       "rarity": 4,
       "level": 70,
-      "constellation": 3,
-      "fetter_level": 4,
+      "constellation": 1,
+      "fetter_level": 2,
       "weapon": null,
-      "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/64a90c55b4bb72cf06068f3d82dbc8da.png",
-      "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/81f5f988b934a9a47db60c38606d1fc2.png"
+      "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/c836c2dc7d71fe8065ae2798d360167b.png",
+      "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/c56e6b7ce9072e548ea8aaef94db3554.png"
+    },
+    {
+      "id": 10000003,
+      "name": "Jean",
+      "element": "Anemo",
+      "rarity": 5,
+      "level": 60,
+      "constellation": 1,
+      "fetter_level": 1,
+      "weapon": null,
+      "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3449/eabf3af20320ed8dc3fed73ab11148cc.png",
+      "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3449/fb6549496c0420027a8a76314ad8a51a.png"
     },
     {
       "id": 10000041,
@@ -193,7 +217,7 @@
       "rarity": 4,
       "level": 60,
       "constellation": 0,
-      "fetter_level": 2,
+      "fetter_level": 3,
       "weapon": null,
       "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/caa2e14875915abee78b186b61fd8f3a.png",
       "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/23844a510719de73b93095cad8bab344.png"
@@ -233,18 +257,6 @@
       "weapon": null,
       "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3449/c1d2a8e0948af4942feb5d086500528b.png",
       "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3449/3adac950e5854a16fa2cb30efc4f005e.png"
-    },
-    {
-      "id": 10000023,
-      "name": "Xiangling",
-      "element": "Pyro",
-      "rarity": 4,
-      "level": 40,
-      "constellation": 1,
-      "fetter_level": 2,
-      "weapon": null,
-      "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/c836c2dc7d71fe8065ae2798d360167b.png",
-      "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/c56e6b7ce9072e548ea8aaef94db3554.png"
     },
     {
       "id": 10000043,
@@ -355,18 +367,6 @@
       "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6c8/bfa1ecf0ff3cd43f322fa45c7609f72f.png"
     },
     {
-      "id": 10000003,
-      "name": "Jean",
-      "element": "Anemo",
-      "rarity": 5,
-      "level": 23,
-      "constellation": 0,
-      "fetter_level": 1,
-      "weapon": null,
-      "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3449/eabf3af20320ed8dc3fed73ab11148cc.png",
-      "card_image": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3449/fb6549496c0420027a8a76314ad8a51a.png"
-    },
-    {
       "id": 10000079,
       "name": "Dehya",
       "element": "Pyro",
@@ -381,7 +381,7 @@
     {
       "id": 10000118,
       "name": "Người Mẫu Nữ",
-      "element": "Geo",
+      "element": "Pyro",
       "rarity": 5,
       "level": 20,
       "constellation": 0,
